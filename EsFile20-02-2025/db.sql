@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS uploadfiles;
+CREATE DATABASE uploadfiles;
+
+
+CREATE TABLE IF NOT EXISTS IMMAGINI (
+	name VARCHAR(69) NOT NULL,
+    type VARCHAR(10) NOT NULL,
+    route VARCHAR(100) NOT NULL,
+    dateUpload VARCHAR(30),
+    PRIMARY KEY (name, route)
+);
