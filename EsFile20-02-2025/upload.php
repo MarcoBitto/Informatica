@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST["upload"]))){
     $date = date("Y-m-d-h-i-s");
     $stmt -> bind_param("ssss", $name, $tipo, $route, $date);
     $stmt -> execute();
-    
+    $stmt -> close();
 
 
     
