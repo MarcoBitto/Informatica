@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST["upload"]))){
     $con = DbConnection::getConnection();
 
     $file = $_FILES;
-    $tipo = mime_content_type($file["file"]["tmp_name"]); 
+    $tipo = $file["file"]["type"]; 
 
     $check = strstr($tipo, '/', true);
     if($check != 'image'){
@@ -52,7 +52,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST["upload"]))){
     $stmt -> bind_param("ssss", $name, $tipo, $route, $date);
     $stmt -> execute();
     $stmt -> close();
-
 
     
 }
