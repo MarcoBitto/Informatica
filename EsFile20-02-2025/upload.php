@@ -4,7 +4,7 @@ require_once("DbConnection.php");
 require_once("config.php");
 
 
-if(!isset($_POST["send"])){
+if(!isset($_POST["upload"])){
     echo "<form action = {$_SERVER['PHP_SELF']} enctype='multipart/form-data' method='post'>";
     echo "<input type='file' name='file'>";
     echo "<input type='submit' name='upload' value='upluoda'>";
